@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>País</title>
+    <style>
+        body{
+           background-image: linear-gradient(to right,#266AA6,#66A3D9,#BDDEF2);
+
+            font-size: 1.5em;
+            font-family: Arial, Helvetica, sans-serif;
+            height: 300px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    
+        <h1>Alfândega</h1>
+        Informe seu país: <input type="text" name="country" id="txtp">
+       <input type="button" value="resultado" onclick="verificar()">
+       <div id="res"></div>
+    
+
+    <script>
+        function verificar(){
+            var country = document.getElementById('txtp')
+            var nacionalidade = String(country.value)
+            var res = document.getElementById('res')
+
+            res.innerHTML = `<p>Seu país é ${nacionalidade}</p>`
+
+
+        if(nacionalidade == 'Brasil'){
+            res.innerHTML += `<p>Você é Brasileiro</p>`
+        } else{
+            res.innerHTML += `<p>Você é Estrangeiro</p>`
+        }
+
+        }
+    </script>
+</body>
+</html>
