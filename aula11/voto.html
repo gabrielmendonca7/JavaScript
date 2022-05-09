@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-image: linear-gradient(to right, #7DA624,#EAF207);
+            font-size: 1.3em;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Sistema de voto</h1>
+    </header>
+    <section>
+       Quantos anos você tem? <input type="number" name="vote" id="txtvote">
+       <input type="button" value="verificar" onclick="vot()">
+        <div id="res"></div>
+    </section>
+
+    <script>
+        function vot(){
+            var txtv = document.getElementById('txtvote')
+            var idade = Number(txtv.value)
+            var res = document.getElementById('res')
+
+            res.innerHTML = `<p>Sua idade é de ${idade} anos</p>`
+
+             if(idade <= 17 || idade >= 70){
+                 res.innerHTML += 'Voto não obrigatório'
+             } else{
+                 res.innerHTML += 'Voto obrigatório'
+             }
+        }
+    </script>
+</body>
+</html>
