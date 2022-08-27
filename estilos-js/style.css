@@ -1,0 +1,23 @@
+body{
+    background-color: #FFFFFF;
+}
+
+input[type=text]{
+    padding: 10px;
+    font-size: 14px;
+}
+
+.azul{
+    background-color: #0000ff;
+    color: #FFFFFF;
+}
+
+.vermelho{
+    background-color: #ff0000;
+    color: #FFFFFF;
+}
+
+.roxo{
+    background-color: rgb(66, 5, 122);
+    color: #FFFFFF;
+}
